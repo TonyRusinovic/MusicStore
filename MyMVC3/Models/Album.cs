@@ -11,7 +11,7 @@ namespace MyMVC3.Models
         public virtual int GenreID { get; set; }
         public virtual int ArtistID { get; set; }
         public virtual string Title { get; set; }
-        public virtual double Price { get; set; }
+        public virtual decimal Price { get; set; }
         public virtual Genre Genre { get; set; }
         public virtual Artist Artist { get; set; }
 
