@@ -58,7 +58,7 @@ namespace MyMVC3.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ArtistID = new SelectList(db.Artists, "ArtistID", "Name", album.ArtistID);
+            ViewBag.ArtistID = new SelectList(db.Artists,"ArtistID", "Name", album.ArtistID);
             ViewBag.GenreID = new SelectList(db.Genres, "GenreID", "Name", album.GenreID);
             return View(album);
         }
