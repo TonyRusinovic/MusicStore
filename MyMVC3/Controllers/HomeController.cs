@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MyMVC3.Models;
 
 namespace MyMVC3.Controllers
 {
     public class HomeController : Controller
     {
+        private MusicStoreDB db = new MusicStoreDB();
         public ActionResult Index()
         {
             return View();

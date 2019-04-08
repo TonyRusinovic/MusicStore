@@ -36,6 +36,12 @@ namespace MyMVC3.Controllers
             return View(album);
         }
 
+        public ActionResult Search(string q)
+        {
+            var albums = db.Albums.Include("Artist").Where(a => a.Title.Contains(q)).Take(10);
+            return View(albums);
+        }
+
         // GET: Albums/Create
         public ActionResult Create()
         {
