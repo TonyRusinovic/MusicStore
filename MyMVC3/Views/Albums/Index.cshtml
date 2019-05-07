@@ -35,7 +35,8 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Artist.Name)
             </td>
-            <td>I
+            <td>
+                I
                 @Html.DisplayFor(modelItem => item.Genre.Name)
             </td>
             <td>
@@ -51,5 +52,13 @@
             </td>
         </tr>
     }
-
 </table>
+
+<div id="dailydeal">
+    @Ajax.ActionLink("Click here to see the daily deal",
+    "DailyDeal",
+    new AjaxOptions { UpdateTargetId = "dailydeal",
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "GET"
+    })
+</div>

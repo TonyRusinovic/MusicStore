@@ -130,6 +130,11 @@ namespace MyMVC3.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult DailyDeal()
+        {
+            return Content("<p>Test</p>");
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
